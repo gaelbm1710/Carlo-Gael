@@ -1,0 +1,274 @@
+$red: #e83d49;
+$gold: #a39667;
+$black: #0d0d0d;
+$cream: #f2f0e9;
+$gray: #f2f2f2;
+$blue: #07325d;
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: $gray;
+}
+
+h1,
+h2,
+h3 {
+  color: $black;
+}
+
+button {
+  background-color: $red;
+  color: $gray;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $red;
+  }
+}
+
+.map-container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.toc {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: $cream;
+  border: 1px solid $black;
+  padding: 10px;
+  border-radius: 5px;
+
+  label {
+    margin: 5px 0;
+    display: block;
+    cursor: pointer;
+  }
+}
+
+//Layout
+.ui.menu.admin-menu {
+  width: 100%;
+  padding: 0;
+
+  > .item {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    color: $gold;
+    padding: 20px 50px !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+
+    &:hover,
+    &.active,
+    &.active:hover {
+      color: $gold;
+      background-color: $blue;
+    }
+
+    > i {
+      margin: 0 !important;
+      margin-right: 10px !important;
+    }
+  }
+
+  .dropdown {
+    width: 100%;
+    .text {
+      font-weight: bold;
+    }
+    .dropdown.icon {
+      float: right;
+      margin-left: 10px !important;
+    }
+  }
+  .menu {
+    background-color: $black;
+    border: 1px solid $black;
+    box-shadow: 0 2px 10px $black;
+    margin-top: 4px;
+
+    .item {
+      color: $red;
+
+      &:hover,
+      &.active,
+      &.active:hover {
+        color: $gold;
+        background-color: $blue;
+      }
+    }
+  }
+
+  // Responsives
+  @media (max-width: 1024px) {
+    > .item {
+      font-size: 14px;
+      padding: 15px 40px !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    > .item {
+      font-size: 13px;
+      padding: 10px 30px !important;
+    }
+    .dropdown {
+      .dropdown.icon {
+        margin-left: 5px !important;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    > .item {
+      font-size: 12px;
+      padding: 8px 20px !important;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .dropdown {
+      .text {
+        font-size: 14px;
+      }
+      .dropdown.icon {
+        float: none;
+        margin: 5px 0 0 0 !important;
+      }
+    }
+    .menu {
+      .item {
+        font-size: 12px;
+        padding: 10px 15px !important;
+      }
+    }
+  }
+}
+
+.ui.menu.admin-menu {
+  width: 100%;
+  padding: 0;
+
+  > .item {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    color: $cream;
+    padding: 20px 50px !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+
+    &:hover,
+    &.active,
+    &.active:hover {
+      color: $cream;
+      background-color: $black;
+    }
+
+    > i {
+      margin: 0 !important;
+      margin-right: 10px !important;
+    }
+  }
+
+  .dropdown {
+    width: 100%;
+    .text {
+      font-weight: bold;
+    }
+    .dropdown.icon {
+      float: right;
+      margin-left: 10px !important;
+    }
+  }
+  .menu {
+    background-color: $cream;
+    border: 1px solid $gray;
+    box-shadow: 0 2px 10px $black;
+    margin-top: 4px;
+
+    .item {
+      color: $red;
+
+      &:hover,
+      &.active,
+      &.active:hover {
+        color: $cream;
+        background-color: $red;
+      }
+    }
+  }
+
+  // Responsives
+  @media (max-width: 1024px) {
+    > .item {
+      font-size: 14px;
+      padding: 15px 40px !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    > .item {
+      font-size: 13px;
+      padding: 10px 30px !important;
+    }
+    .dropdown {
+      .dropdown.icon {
+        margin-left: 5px !important;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    > .item {
+      font-size: 12px;
+      padding: 8px 20px !important;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .dropdown {
+      .text {
+        font-size: 14px;
+      }
+      .dropdown.icon {
+        float: none;
+        margin: 5px 0 0 0 !important;
+      }
+    }
+    .menu {
+      .item {
+        font-size: 12px;
+        padding: 10px 15px !important;
+      }
+    }
+  }
+}
+
+//Mapa
+.map-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.toc-container {
+  margin-bottom: 10px;
+  z-index: 1;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.map-view {
+  flex: 1;
+  position: relative;
+}
